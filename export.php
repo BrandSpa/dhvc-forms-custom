@@ -26,11 +26,19 @@ function outputCSV($data) {
 if ( isset($_GET['form_id']) && $_GET['form_id'] != '0' )
 {
 	$form_id = addslashes($_GET['form_id']);
-	$forms = get_posts(array(
-		'p'=>$form_id,
-		'post_type'=>'dhvcform'
-	));
-	
+
+	if($form_id !== 'all'){
+		$forms = get_posts(array(
+			'p'=>$form_id,
+			'post_type'=>'dhvcform'
+		));
+	}else{
+		$forms = get_posts(array(
+			'post_type'=>'dhvcform'
+		));
+	}
+
+
 	if (empty($forms))
 	{
 		echo "No submissions to export";
