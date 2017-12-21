@@ -46,8 +46,7 @@ if ( isset($_GET['form_id']) && $_GET['form_id'] != '0' )
 	}
 	
 	global $dhvcform_db;
-	echo '<pre>';
-	print_r($forms); exit;
+
 	foreach ($forms as $form){
 		$form_control = get_post_meta($form->ID,'_form_control',true);
 		if($form_control){
