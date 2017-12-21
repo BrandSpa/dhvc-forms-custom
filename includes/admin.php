@@ -1495,8 +1495,9 @@ class DHVCFormAdmin {
 				));
                 ?>
                 <span style="margin-left: 30px;font-weight: bold;"><?php esc_html_e('Filter by form to export:', 'dhvc-form'); ?></span>
-                <select multiple name="form_id" class="dhvc-form-entry-select-action" style="float: none;margin-left: 10px">
+                <select name="form_id" class="dhvc-form-entry-select-action" style="float: none;margin-left: 10px">
                 	<option value="0" <?php selected($limit, 0); ?>><?php echo __('View all form')?></option>
+					<option value="all" <?php selected($limit, 0); ?>><?php echo __('Export all forms')?></option>
                 	<?php foreach ($forms as $form):?>
                     <option value="<?php echo $form->ID ?>" <?php selected($form_id,$form->ID); ?>><?php echo $form->ID.' - '.$form->post_title ?></option>
                     <?php endforeach;?>
