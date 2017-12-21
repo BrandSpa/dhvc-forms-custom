@@ -34,7 +34,11 @@ if ( isset($_GET['form_id']) && $_GET['form_id'] != '0' )
 		));
 	}else{
 		$forms = get_posts(array(
-			'post_type'=>'dhvcform'
+			'post_type'=>'dhvcform',
+			'orderby' => 'multiform',
+			'order' => 'desc',
+			'meta_key' => 'multiform',
+			'meta_value' => 1
 		));
 	}
 
