@@ -1503,7 +1503,7 @@ class DHVCFormAdmin {
                     <?php endforeach;?>
                 </select>
                 <?php if(!empty($form_id) && $_GET['form_id']!='all' ):?>
-                <a href="<?php echo plugins_url('/dhvc-form/export.php?form_id='.$_GET['form_id']!='all' ? $form_id: $_GET['form_id']); ?>" target="_blank" class="button"><?php _e('Export','dhvc-form')?></a>
+                <a href="<?php echo plugins_url('/dhvc-form/export.php?form_id='.$_GET['form_id']); ?>" target="_blank" class="button"><?php _e('Export','dhvc-form')?></a>
             	<?php endif;?>
             </div>
              <?php echo $this->_get_pagination($limit, $total, 'top'); ?>
