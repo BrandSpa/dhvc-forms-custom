@@ -433,13 +433,21 @@ function dhvc_form_rate_option_remove(element){
 			
 		});
 	}
-	
-	$('input[name=multiform]').on('change', function(e){
-		if( $(this).is(':checked') ){
-			$('input[name=multiform_step]').show();
-		}else{
-			$('input[name=multiform_step]').hide();
+
+	$(document).ready(function(){
+
+		$('input[name=multiform]').on('change', validate_multi_form);
+
+		function validate_multi_form(){
+			if( $(this).is(':checked') ){
+				$('.multiform_step_field').show();
+			}else{
+				$('.multiform_step_field').hide();
+			}
 		}
+
+		validate_multi_form();
 	})
+	
 	
 })(window.jQuery);
