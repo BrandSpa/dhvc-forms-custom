@@ -434,5 +434,12 @@ function dhvc_form_rate_option_remove(element){
 		});
 	}
 	
+	$('input[name=multiform]').on('change', function(e){
+		if( $(this).is(':checked') ){
+			$('input[name=multiform_step]').show();
+		}else{
+			$('input[name=multiform_step]').hide();
+		}
+	})
 	
 })(window.jQuery);
