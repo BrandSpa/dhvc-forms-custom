@@ -1502,7 +1502,7 @@ class DHVCFormAdmin {
                     <option value="<?php echo $form->ID ?>" <?php selected($form_id,$form->ID); ?>><?php echo $form->ID.' - '.$form->post_title ?></option>
                     <?php endforeach;?>
                 </select>
-                <?php if(!empty($form_id) && $_GET['form_id']!='all' ):?>
+                <?php if(!empty($form_id) || $_GET['form_id']=='all' ):?>
                 <a href="<?php echo plugins_url('/dhvc-form/export.php?form_id='.$_GET['form_id']); ?>" target="_blank" class="button"><?php _e('Export','dhvc-form')?></a>
             	<?php endif;?>
             </div>
