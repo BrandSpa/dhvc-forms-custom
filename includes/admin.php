@@ -1443,7 +1443,7 @@ class DHVCFormAdmin {
 		$order = isset($_GET['order']) && strtolower($_GET['order']) == 'asc' ? 'asc' : 'desc';
 		$reverseOrder = $order == 'asc' ? 'desc' : 'asc';
 		
-		$form_id = isset($_GET['form_id']) ? $_GET['form_id'] : 0;
+		$form_id = isset($_GET['form_id']) && $_GET['form_id'] != 'all' ? $_GET['form_id'] : 0;
 		$limit = isset($_GET['limit']) ? $_GET['limit'] : 10;
 		
 		$offset =  $limit * ($this->_get_current_page_num() - 1);
