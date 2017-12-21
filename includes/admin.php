@@ -435,6 +435,16 @@ class DHVCFormAdmin {
 						)
 				),
 				array (
+					"type" => "checkbox",
+					"label" => __ ( "Multiform", 'dhvc-form' ),
+					"name" => "multiform"
+				),
+				array (
+					"type" => "text",
+					"label" => __ ( "Step", 'dhvc-form' ),
+					"name" => "multiform_step"
+				),
+				array (
 					"type" => "text",
 					"label" => __ ( "Enter URL", 'dhvc-form' ),
 					"name" => "action_url",
