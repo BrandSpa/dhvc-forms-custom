@@ -439,7 +439,7 @@ function dhvc_form_rate_option_remove(element){
 		$('input[name=multiform]').on('change', validate_multi_form);
 
 		function validate_multi_form(){
-			if( $(this).is(':checked') ){
+			if( $('input[name=multiform]').is(':checked') ){
 				$('.multiform_step_field').show();
 			}else{
 				$('.multiform_step_field').hide();
